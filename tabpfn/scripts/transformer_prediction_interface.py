@@ -295,7 +295,7 @@ class TabPFNClassifier(BaseEstimator, ClassifierMixin):
         y = np.argmax(p, axis=-1)
         y = self.classes_.take(np.asarray(y, dtype=np.intp))
         if return_winning_probability:
-            return y, p.max(axis=-1)
+            return y, p
         return y
 
 import time
